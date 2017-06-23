@@ -22,6 +22,7 @@ one thread is ever operating on the map even if the handle is passed to many.
 ## Todo
 
 - [ ] make this a map like interface for easier usage everywhere?
+- [ ] compare performance to traditional swap! access to ref
 
 
 ## License
