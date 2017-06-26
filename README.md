@@ -9,7 +9,6 @@ one thread is ever operating on the map even if the handle is passed to many.
 
 ## Usage
 
-
 ```clojure
 (let [handle (func-cache)]
   (cache-empty? handle) ;; true
@@ -19,11 +18,14 @@ one thread is ever operating on the map even if the handle is passed to many.
   (cache-destroy handle)) ;; close the handle
 ```
 
-## Todo
+## Why?
 
-- [ ] make this a map like interface for easier usage everywhere?
-- [ ] compare performance to traditional swap! access to ref
+This is by no means ment to be used in any real application, as it will be
+significantly slower than using the clojure builtin transactions. It was done to
+explore a concept of using functions as messages, which can be a very powerful
+idea.
 
+For performance see `test/sideshowcoder/func_cache/performance_test.clj`
 
 ## License
 
